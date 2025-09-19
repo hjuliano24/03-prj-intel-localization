@@ -32,13 +32,15 @@ header {
   flex-direction: row;
 }
 
-header div img {
-  border: 0;
-  width: 7em;
-  flex-direction: right;
+#logo {
+  border: none;
+  height: 2em;
   margin : 1em;
 }
 
+.col-6 {
+  width: auto;
+}
 h1 {
   color:white;
   width: auto;
@@ -167,6 +169,18 @@ img { border: 2px solid white; }
   color: white;
   font-size: 2em;
 }
+
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1em;
+  color: white;
+}
+
+footer img {
+  width: 10em;
+  border: none;
+}
+
 
 @media (max-width: 768px) {
   body { font-size: 1em; }
