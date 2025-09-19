@@ -24,7 +24,6 @@ header {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 1em;
   margin: 0 0 0 0;
-  text-align: center;
 }
 
 #header-content {
@@ -58,7 +57,6 @@ h1, h2, h3, h4 {
 
 header p {
   color: rgba(0, 199, 253);
-  align-items : center;
 }
 
 .timeline {
@@ -154,7 +152,6 @@ img { border: 2px solid white; }
 
 .three-column > div > div > div > p{
   font-weight: bold;
-  text-align: left;
 }
 
 .subscription {
@@ -188,7 +185,6 @@ footer img {
   header > p {
     width: 90%;
     font-size: 1em;
-    text-align: left;
     padding: 1em;
     margin: 0;
     background-color: rgba(0, 104, 181, 0.3);
