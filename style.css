@@ -1,9 +1,7 @@
-
 html, body {
   width: 100%;
-  margin: 0; /* Removes default margin */
-  padding: 0; /* Removes default padding */
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -13,8 +11,6 @@ body {
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
   background-repeat: no-repeat;
-      
- /* Fix the background in place during scrolling */
   background-attachment: fixed; 
 }
 
@@ -27,62 +23,80 @@ body {
 header {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 1em;
-  margin: 0 0 2em 0;
+  margin: 0 0 0 0;
   text-align: center;
 }
 
 #header-content {
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 
-header img {
+header div img {
   border: 0;
-  width: 5em;
-  justify-content: left;
+  width: 7em;
+  flex-direction: right;
+  margin : 1em;
 }
 
 h1 {
-  width: 50em;
-  color: white;
+  color:white;
+  width: auto;
   font-size: 2.5em;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+}
+
+.nobox {
+  /*Fixes p's allignment*/
+  box-sizing: unset; 
 }
 
 header p {
   color: rgba(0, 199, 253);
-  width: 70%;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  align-items : center;
 }
 
-section {
+.timeline {
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
-  flex-direction: row;
   overflow-x: auto;
-  gap: 1rem;
   margin: 1em;
-  text-align: center;
   scrollbar-width: none; /* Firefox */
 }
 
-section::-webkit-scrollbar {
+.timeline::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge */
 }
 
-section > div {
-  background-color: rgba(0, 104, 181, 0.8);
-  min-width: 20em;
-  max-width: 30em;
+.timeline > div {
+  background-color: rgba(60, 132, 187, 0.8);
+  min-width: 19em;
   flex: 0 0 auto;
   margin: 1em;
   padding: 1rem;
   position: relative;
 }
 
-section > div p {
+.timeline > div img {
+  display: block; /* Add this */
+  margin: 0 auto 1em auto;
+  height: 10em;
+}
+
+.timeline > div h2 {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+.timeline > div h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.timeline > div p {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
@@ -90,7 +104,6 @@ section > div p {
   top: 0;
   left: 0;
   width: 100%;
-  box-sizing: border-box;
   height: 100%;
   background: rgba(255,255,255,0.97);
   color: #071039;
@@ -99,21 +112,13 @@ section > div p {
   z-index: 10;
   font-size: 1em;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  font-weight: 700;
 }
 
-section > div img {
-  width: auto;
-  height: 10em;
-}
-
-section > div:hover p {
+.timeline > div:hover p {
   opacity: 1;
   pointer-events: auto;
 }
-
 
 #card1 { flex: 1; }
 #card2 { flex: 2; }
@@ -128,17 +133,45 @@ section > div:hover p {
 #card1 img { background-color: white; }
 img { border: 2px solid white; }
 
-#info {
-  text-align: center;
+.three-column {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 1em;
+  padding: 1em;
   color: white;
-  padding-bottom: 1em;
 }
 
+.three-column div div div {
+  height: 35em;
+  border: white 2px solid;
+}
+
+.three-column div div div h2 {
+  font-weight: 900;
+  padding: 1em;
+}
+
+.three-column > div > div > div > p{
+  font-weight: bold;
+  text-align: left;
+}
+
+.subscription {
+  color:#FFFFFF;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 1em;
+  padding: 1em;
+  text-align: center;
+}
+
+.subscription > h2 {
+  color: white;
+  font-size: 2em;
+}
 
 @media (max-width: 768px) {
   body { font-size: 1em; }
   h1 { font-size: 1.5em; }
-  header p {
+  header > p {
     width: 90%;
     font-size: 1em;
     text-align: left;
@@ -173,5 +206,4 @@ img { border: 2px solid white; }
     margin: 0;
     align-items: center;
   }
-  #info { display: none; }
 }
